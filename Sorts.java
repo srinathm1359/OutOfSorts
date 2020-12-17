@@ -32,7 +32,7 @@ public class Sorts{
     }
   }
 
-  public static void main(String[] args) {
+  /* public static void main(String[] args) {
     int[] array = {9,8,7,6,5,4,3,2,1,0};
     for (int i = 0; i < array.length - 1; i++) {
       swap(array, i);
@@ -47,5 +47,5 @@ public class Sorts{
     int[] almostSorted = {1,2,3,4,6,5};
     bubbleSort(almostSorted);
     System.out.println(Arrays.toString(almostSorted));
-  }
+  } */
 }
