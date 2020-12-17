@@ -41,5 +41,11 @@ public class Sorts{
     int[] array2 = {10,11,13,8,4,16};
     bubbleSort(array2);
     System.out.println(Arrays.toString(array2));
+    int[] sortedArray = {1,2,3,4,5,6};
+    bubbleSort(sortedArray);
+    System.out.println(Arrays.toString(sortedArray));
+    int[] almostSorted = {1,2,3,4,6,5};
+    bubbleSort(almostSorted);
+    System.out.println(Arrays.toString(almostSorted));
   }
 }
