@@ -14,7 +14,22 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data) {
-
+    boolean swapped = true;
+    int counter = data.length - 1;
+    int swapCount = 0;
+    while (swapped == true && counter > 0) {
+      for (int i = 0; i < counter; i++) {
+        /*if (data[i] > data[i+1]) {
+          swapCount++;
+        }*/
+        swap(data, i);
+      }
+      /*if (swapCount == 0) {
+        swapped = false;
+      }
+      swapCount = 0;*/
+      counter--;
+    }
   }
 
   public static void main(String[] args) {
@@ -23,5 +38,8 @@ public class Sorts{
       swap(array, i);
       System.out.println(Arrays.toString(array));
     }
+    int[] array2 = {10,11,13,8,4,16};
+    bubbleSort(array2);
+    System.out.println(Arrays.toString(array2));
   }
 }
