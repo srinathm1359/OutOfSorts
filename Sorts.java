@@ -19,15 +19,15 @@ public class Sorts{
     int swapCount = 0;
     while (swapped == true && counter > 0) {
       for (int i = 0; i < counter; i++) {
-        /*if (data[i] > data[i+1]) {
+        if (data[i] > data[i+1]) {
           swapCount++;
-        }*/
+        }
         swap(data, i);
       }
-      /*if (swapCount == 0) {
+      if (swapCount == 0) {
         swapped = false;
       }
-      swapCount = 0;*/
+      swapCount = 0;
       counter--;
     }
   }
