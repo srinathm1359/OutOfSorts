@@ -72,5 +72,25 @@ public class Sorts{
       swap(data, i, smallestIndex);
     }
   }
-
+  /**insertion sort of an int array.
+  *@postcondition The array will be modified such that the elements will be in increasing order.
+  *@param data - the elements to be sorted.
+  */
+  public static void insertionSort(int[] data){
+    //setup
+    int current;
+    int currentIndex;
+    int currentAtMost;
+    //loop
+    for (int i = 1; i < data.length; i++) {
+      current = data[i];
+      //insert current element
+      currentAtMost = i-1;
+      while (currentAtMost >= 0 && current < data[currentAtMost]) {
+        swap(data, currentAtMost);
+        currentAtMost--;
+        //System.out.println(Arrays.toString(data));
+      }
+    }
+  }
 }
