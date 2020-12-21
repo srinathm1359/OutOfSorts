@@ -8,10 +8,13 @@ public class Driver{
       System.out.println("supported STYLE: random,equal,sorted,reversed");
     }
     else{
+
       int[] randData = new int[Integer.parseInt(args[0])];
 
-      for(int i = 0 ; i < randData.length; i++){
-        randData[i] =(int)(Math.random()*10000);
+      if(args.length < 3 || args[2].equals("random")){
+        for(int i = 0 ; i < randData.length; i++){
+          randData[i] =(int)(Math.random()*10000);
+        }
       }
 
       if(args[1].equals("bubble")){
@@ -24,7 +27,7 @@ public class Driver{
         Sorts.insertionSort(randData);
       }
 
-      if(args[1].equals("test")){
+      else if(args[1].equals("test")){
         //test bubble
         int[] randDataBubble = Arrays.copyOf(randData,randData.length);
         Arrays.sort(randData);
