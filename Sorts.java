@@ -50,5 +50,27 @@ public class Sorts{
     }
   }
 
+  /**selection sort of an int array.
+  *@postcondition The array will be modified such that the elements will be in increasing order.
+  *@param data - the elements to be sorted.
+  */
+  public static void selectionSort(int[] data){
+    //setup
+    int smallest;
+    int smallestIndex;
+    for (int i = 0; i < data.length - 1; i++) {
+      //find smallest
+      smallest = data[i];
+      smallestIndex = i;
+      for (int j = i + 1; j < data.length; j++) {
+        if (data[j] < smallest) {
+          smallestIndex = j;
+          smallest = data[j];
+        }
+      }
+      //swap smallest into position i
+      swap(data, i, smallestIndex);
+    }
+  }
 
 }
