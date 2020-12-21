@@ -7,6 +7,7 @@ public class Tester {
       Sorts.swap(array, i);
       System.out.println(Arrays.toString(array));
     }
+    //Test bubbleSort
     int[] array2 = {10,11,13,8,4,16};
     Sorts.bubbleSort(array2);
     System.out.println(Arrays.toString(array2));
@@ -16,6 +17,15 @@ public class Tester {
     int[] almostSorted = {1,2,3,4,6,5};
     Sorts.bubbleSort(almostSorted);
     System.out.println(Arrays.toString(almostSorted));
+    //Test selectionSort
+    int[] array3 = {10,11,13,8,4,16};
+    Sorts.selectionSort(array3);
+    System.out.println(Arrays.toString(array3));
+    Sorts.selectionSort(sortedArray);
+    System.out.println(Arrays.toString(sortedArray));
+    int[] almostSorted2 = {1,2,3,4,6,5};
+    Sorts.selectionSort(almostSorted2);
+    System.out.println(Arrays.toString(almostSorted2));
   }
 
 }
