@@ -1,11 +1,29 @@
 import java.util.Arrays;
 public class Sorts{
+
   public static void swap(int[] array, int a) {
     if (a >= 0 && a+1 < array.length) {
       if (array[a] > array[a+1]) {
         int store = array[a];
         array[a] = array[a+1];
         array[a+1] = store;
+      }
+    }
+  }
+
+  public static void swap(int[] array, int a, int b) {
+    if (a > b) {
+      if (array[b] > array[a]) {
+        int store = array[b];
+        array[b] = array[a];
+        array[a] = store;
+      }
+    }
+    if (a < b) {
+      if (array[b] < array[a]) {
+        int store = array[b];
+        array[b] = array[a];
+        array[a] = store;
       }
     }
   }
@@ -32,5 +50,5 @@ public class Sorts{
     }
   }
 
-  
+
 }
