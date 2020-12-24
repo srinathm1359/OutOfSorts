@@ -12,8 +12,20 @@ public class Driver{
       int[] randData = new int[Integer.parseInt(args[0])];
 
       if(args.length < 3 || args[2].equals("random")){
-        for(int i = 0 ; i < randData.length; i++){
+        for(int i = 0; i < randData.length; i++){
           randData[i] =(int)(Math.random()*10000);
+        }
+      }else if(args[2].equals("equal")){
+        for (int i = 0; i < randData.length; i++){
+          randData[i] = 0;
+        }
+      }else if(args[2].equals("sorted")){
+	      for (int i = 0; i < randData.length; i++){
+          randData[i] = i;
+        }
+      }else if(args[2].equals("reversed")){
+	      for (int i = 0; i < randData.length; i++){
+          randData[i] = -i;
         }
       }
 
@@ -26,7 +38,6 @@ public class Driver{
       else if(args[1].equals("insertion")){
         Sorts.insertionSort(randData);
       }
-
       else if(args[1].equals("test")){
         //test bubble
         int[] randDataBubble = Arrays.copyOf(randData,randData.length);
